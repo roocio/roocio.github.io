@@ -7,10 +7,10 @@ function Home() {
     <div>
       <Header />
       <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h1 class="mt-5">The Big Picture</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <h1 className="mt-5">The Big Picture</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Deserunt voluptates rerum eveniet sapiente repellat esse,

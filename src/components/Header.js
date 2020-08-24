@@ -1,50 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+
+import AboutModal from './AboutModal'
+import Contact from './Contact'
 
 function Navigation() {
+  const [show, setShow] = useState(false)
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-      <div className="container">
-        <a className="navbar-brand" href="#">
-          Start Bootstrap
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home
-                <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Services
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar collapseOnSelect expand="lg" fixed="bottom" className="ml-2 ">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto text-monospace">
+          <Nav.Link onClick={() => setShow(true)}>About</Nav.Link>
+          <Contact linkText={'Contact'} />
+        </Nav>
+        <AboutModal show={show} hide={() => setShow(false)} />
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 export default Navigation

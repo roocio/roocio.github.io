@@ -11,11 +11,18 @@ function Navigation() {
   const [show, setShow] = useState(false)
 
   return (
-    <Navbar collapseOnSelect expand="lg" fixed="bottom" className="ml-2 ">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      fixed="bottom"
+      className="ml-2 mb-3 col-3 col-sm-3"
+    >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto text-monospace">
-          <Nav.Link onClick={() => setShow(true)}>About</Nav.Link>
+          <Nav.Link href="#" onClick={() => setShow(true)}>
+            About
+          </Nav.Link>
           <Contact linkText={'Contact'} />
         </Nav>
         <AboutModal show={show} hide={() => setShow(false)} />

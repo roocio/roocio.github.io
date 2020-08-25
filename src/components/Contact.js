@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
@@ -12,12 +12,19 @@ import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
 function Contact({ linkText }) {
   const [show, setShow] = useState(false)
+  const [target, setTarget] = useState(null)
+  const ref = useRef(null)
   return (
-    <div onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+    <div
+      ref={ref}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
       <OverlayTrigger
         placement="top"
         show={show}
         onToggle={() => setShow(true)}
+        target={target}
         overlay={
           <Tooltip id="tooltip-top">
             <h6 className="text-monospace">Hi there.</h6>
@@ -36,7 +43,13 @@ function Contact({ linkText }) {
           </Tooltip>
         }
       >
-        <Nav.Link>{linkText}</Nav.Link>
+        <Nav.Link
+          href="#"
+          onClick={(event) => setTarget(event.target)}
+          onMouseEnter={(event) => setTarget(event.target)}
+        >
+          {linkText}
+        </Nav.Link>
       </OverlayTrigger>
     </div>
   )

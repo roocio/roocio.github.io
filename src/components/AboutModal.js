@@ -11,7 +11,6 @@ function AboutModal({ show, hide }) {
     <Modal
       show={show}
       onHide={hide}
-      // dialogClassName="modal-100w"
       aria-labelledby="large-centered-modal"
       centered
       className="about-modal"
@@ -27,22 +26,27 @@ function AboutModal({ show, hide }) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Row className="text-monospace">
-          <Col>
-            <p>
-              This page just shows random stuff, but most of all, things that I
-              enjoy develop, analyze, and learn. In the end there is only one
-              collection of everything that I personally like and makes me have
-              a while of fun and frustration.
-            </p>
-            <p>why not.</p>
-            <p>
-              On the page you can find some data visualizations, some weird
-              games, generative images, among other things. The code will be
-              available in the section "Repos".
-            </p>
+        <Row className="text-monospace" xs={1} sm={1} md={2}>
+          <Col md={9}>
+            <div>
+              <p>
+                This page just shows random stuff, but most of all, things that
+                I enjoy develop, analyze, and learn. In the end there is only
+                one collection of everything that I personally like and makes me
+                have a while of fun and frustration.
+              </p>
+              <p>why not.</p>
+              <p>
+                On the page you can find some data visualizations, some weird
+                games, generative images, among other things. The code will be
+                available in the section "Repos".
+              </p>
+            </div>
           </Col>
-          <Col md="auto">
+          <Col
+            md="auto"
+            lassName="d-flex justify-content-center align-self-center"
+          >
             <AboutCard />
           </Col>
         </Row>

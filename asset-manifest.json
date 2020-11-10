@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/static/js/main.1813c858.chunk.js",
+    "main.js.map": "/static/js/main.1813c858.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6b3488d1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6b3488d1.js.map",
+    "static/css/2.909eb1ec.chunk.css": "/static/css/2.909eb1ec.chunk.css",
+    "static/js/2.bfa4179f.chunk.js": "/static/js/2.bfa4179f.chunk.js",
+    "static/js/2.bfa4179f.chunk.js.map": "/static/js/2.bfa4179f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.5b8c42f46a11c1ad5f35b5991ef74055.js": "/precache-manifest.5b8c42f46a11c1ad5f35b5991ef74055.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.909eb1ec.chunk.css.map": "/static/css/2.909eb1ec.chunk.css.map",
+    "static/js/2.bfa4179f.chunk.js.LICENSE.txt": "/static/js/2.bfa4179f.chunk.js.LICENSE.txt",
+    "static/media/BebasNeue-Regular.ttf": "/static/media/BebasNeue-Regular.21bb70b6.ttf",
+    "static/media/imgAllDone.svg": "/static/media/imgAllDone.838efb1e.svg",
+    "static/media/imgEmptyList.svg": "/static/media/imgEmptyList.45589b88.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b3488d1.js",
+    "static/css/2.909eb1ec.chunk.css",
+    "static/js/2.bfa4179f.chunk.js",
+    "static/js/main.1813c858.chunk.js"
+  ]
+}
